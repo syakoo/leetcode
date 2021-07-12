@@ -1,6 +1,8 @@
 import { range } from '../range'
 
-describe('range() のテスト', () => {
+// __________
+//
+describe('range()', () => {
   test('range(0, 5)', () => {
     const result = range(0, 5)
     expect([...result]).toEqual([0, 1, 2, 3, 4])
