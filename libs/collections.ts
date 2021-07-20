@@ -7,9 +7,9 @@ type LinkedNode<T> = {
 }
 
 class Deque<T> {
-  lastNode: LinkedNode<T> | null = null
-  firstNode: LinkedNode<T> | null = null
-  _length: number = 0
+  private lastNode: LinkedNode<T> | null = null
+  private firstNode: LinkedNode<T> | null = null
+  private _length: number = 0
 
   constructor(arr: T[]) {
     arr.forEach((data) => this.pushLast(data))
