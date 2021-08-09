@@ -12,7 +12,7 @@ function minCut(s: string): number {
     if (memo[l][r] >= 0) return memo[l][r]
 
     let flg = true
-    for (let i = l; i < r; i++) {
+    for (let i = l; i < l + Math.ceil((r - l) / 2); i++) {
       if (s[i] !== s[l + r - i - 1]) {
         flg = false
         break
