@@ -1,11 +1,11 @@
 import { MaxPriorityQueue } from '@datastructures-js/priority-queue'
 
 function minStoneSum(piles: number[], k: number): number {
-  const que = new MaxPriorityQueue<number>()
+  const que = new MaxPriorityQueue<number>({ priority: (x) => x })
   piles.forEach((p) => que.enqueue(p))
   ;[...Array(k)].forEach((_) => {
     const { element } = que.dequeue()
-    que.enqueue(Math.floor(element / 2))
+    que.enqueue(Math.ceil(element / 2))
   })
 
   let sum = 0
