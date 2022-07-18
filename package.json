@@ -4,10 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "prepare": "yarn simple-git-hooks",
     "ts-node": "ts-node",
     "test": "jest"
   },
   "devDependencies": {
+    "@syakoo/emoji-prefix-commit": "git+https://github.com/syakoo/emoji-prefix-commit",
     "@types/jest": "^26.0.24",
     "jest": "^27.0.6",
     "ts-jest": "^27.0.3",
@@ -34,6 +36,10 @@
   "dependencies": {
     "@datastructures-js/priority-queue": "^5.1.1",
     "@datastructures-js/queue": "^4.1.3",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "simple-git-hooks": "^2.8.0"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx emoji-prefix-commit"
   }
 }
